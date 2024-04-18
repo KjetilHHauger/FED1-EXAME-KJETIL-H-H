@@ -53,8 +53,45 @@ body h2 {
     margin-top: 8px;
 }
 
+.index-post-title img {
+    display: none;
+}
+
+
 @media screen and (min-width: 768px) {
     .index-title {
         font-size: 8rem;
+    }
+
+    .index-posts {
+        display: flex;
+        column-gap: 24px;
+    }
+
+    .index-posts-posts {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .index-post-title {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 200px;
+        padding-left: 0;
+        font-weight: 900;
+    }
+
+    .index-post-title h3 {
+       margin: 4px;
+    }
+
+    .index-post-title img {
+        object-fit: cover;
+        margin: 8px;
+        width: 180px;
+        height: 150px;
+        display: block;
     }
 }

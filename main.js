@@ -9,9 +9,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             data.forEach(post => {
                 const postDiv = document.createElement('div');
                 postDiv.classList.add('index-post-title');
-                postDiv.innerHTML = `
-                    <h3>${post.title}</h3>
-                `;
+                
+                // Check screen width and include image if above 768 pixels
+                if (window.innerWidth > 768 && post.media && post.media.url) {
+                    const image = document.createElement('img');
+                    image.src = post.media.url;
+                    image.alt = post.media.alt || ''; // Provide alternative text if available
+                    postDiv.appendChild(image);
+                }
+                
+                const title = document.createElement('h3');
+                title.textContent = post.title;
+                postDiv.appendChild(title);
+                
                 postsContainer.appendChild(postDiv);
             });
         } else {
