@@ -27,6 +27,7 @@ body {
 
 body h2 {
     color: var(--secondary);
+    font-size: 4rem;
 }
   
 .index-carousel {
@@ -109,7 +110,7 @@ body h2 {
         column-gap: 24px;
     }
 
-    .index-posts-posts {
+    .index-posts-title {
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
