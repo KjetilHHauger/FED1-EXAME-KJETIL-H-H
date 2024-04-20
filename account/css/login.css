@@ -1,0 +1,123 @@
+:root {
+    --primary: #330C2F;
+    --secondary: #20C4D9;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 0 35px 0 35px;
+    height: 100vh;
+}
+
+.login-title {
+    margin-top: 0;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary);
+}
+
+.login-form {
+    background-color: var(--secondary);
+    width: 250px;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form p {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.login-form h3 {
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#login-form-name, #login-form-password {
+    margin-top: 4px;
+    width: 165px;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--secondary);
+    border: 1px solid;
+}
+
+.login-label {
+    margin-top: 24px;
+    margin-left: 43px;
+}
+
+.login-cta {
+    margin: 32px auto 20px auto;
+    width: 80px;
+    height: 24px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 1.125rem;
+    font-weight: 700;
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+    .login-title {
+        font-size: 8rem;
+        margin-left: 550px;
+        margin-bottom: 0;
+        padding: 70px;
+    }
+
+    .login-form {
+        width: 516px;
+        height: 649px;
+    }
+
+    .login-form h3 {
+        font-size: 2.25rem;
+        font-weight: 800;
+    }
+    
+    #login-form-name, #login-form-password {
+        margin-top: 12px;
+        width: 340px;
+        height: 92px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--secondary);
+        font-size: 2.25rem;
+        padding-left: 25px;
+    }
+    
+    .login-label {
+        margin-top: 70px;
+        margin-left: 87px;
+        font-size: 2.25rem;
+    }
+    
+    .login-cta {
+        margin: 32px auto 20px auto;
+        width: 128px;
+        height: 48px;
+        font-size: 2.25rem;
+    }
+}

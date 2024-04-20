@@ -3,11 +3,20 @@
     --secondary: #20C4D9;
 }
 
+@font-face {
+    font-family: legothick;
+    src: url(/assets/font/legothick.ttf);
+}
+
 * {
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+.blog-logo {
+    font-family: legothick;
 }
 
 body {
@@ -20,7 +29,14 @@ body h2 {
     font-weight: 400;
 }
 
+#nextBtn {
+    position: absolute;
+    top: 10px;
+}
+
 .index-carousel {
+    display: flex;
+    overflow: hidden;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -29,9 +45,28 @@ body h2 {
     height: 400px;
 }
 
+.index-carousel-item {
+    width: 100%;
+}
+
+.index-carousel-item {
+    display: none;
+}
+  
+.index-carousel-item:first-child {
+    display: block;
+}
+
+.index-carousel-item img {
+    object-fit: none;
+    object-position: bottom;
+    max-width: 1000px;
+}
+
 .index-title {
     display: flex;
     justify-content: center;
+    padding-top: 84px;
     color: var(--secondary);
     font-size: 4rem;
 }
@@ -60,7 +95,8 @@ body h2 {
 
 @media screen and (min-width: 768px) {
     .index-title {
-        font-size: 8rem;
+        font-size: 12.5rem;
+        margin: 0;
     }
 
     .index-posts {

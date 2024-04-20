@@ -6,22 +6,27 @@
     <title>Login │ Bloggie</title>
     <link rel="stylesheet" href="/account/css/login.css">
     <script src="/account/js/login.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
 
 </head>
 <body>
-    <h1 class="login-title">Bloggie</h1>
-    <div class="register-form">
-        <label for="login-form-name">Name</label>
-        <input type="text" id="login-form-name" name="login-form-name" placeholder="Name">
-        <label for="login-form-password">Password</label>
+    <h1 class="login-title blog-logo">Bloggie</h1>
+    <div class="login-form">
+        <label class="login-label" for="login-form-name">Email</label>
+        <input type="text" id="login-form-name" name="login-form-name" placeholder="Email">
+        <label class="login-label" for="login-form-password">Password</label>
         <input type="password" id="login-form-password" name="login-form-password" placeholder="Password">
-    </div>
-    <div>
-        <p>
-            or <a href="/account/register.html">REGISTER</a> for your
-        </p>
-        <h3>Bloggie</h3>
-    </div>
-    <div class="login-login-cta">Login</div>
+        <div>
+            <p>
+                or&nbsp;<a href="/account/register.html">REGISTER</a>&nbsp;for your
+            </p>
+            <h3 class="blog-logo">Bloggie</h3>
+        </div>
+        <button class="login-cta">Login</button>
+    </div>  
 </body>
 </html>
