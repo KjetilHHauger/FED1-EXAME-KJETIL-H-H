@@ -65,8 +65,8 @@ function initCarousel(data) {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".index-carousel-item");
   const totalSlides = slides.length;
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("carousel-next-btn");
+  const prevBtn = document.getElementById("carousel-prev-btn");
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -93,4 +93,7 @@ function initCarousel(data) {
 
   // Show initial slide
   showSlide(currentSlide);
+
+  // Automatically transition to the next slide every 3 seconds
+  setInterval(nextSlide, 5000);
 }
