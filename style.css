@@ -28,12 +28,7 @@ body h2 {
     color: var(--secondary);
     font-weight: 400;
 }
-
-#nextBtn {
-    position: absolute;
-    top: 10px;
-}
-
+  
 .index-carousel {
     display: flex;
     overflow: hidden;
@@ -45,22 +40,37 @@ body h2 {
     height: 400px;
 }
 
-.index-carousel-item {
-    width: 100%;
-}
-
-.index-carousel-item {
-    display: none;
-}
-  
-.index-carousel-item:first-child {
-    display: block;
-}
-
 .index-carousel-item img {
     object-fit: none;
     object-position: bottom;
     max-width: 1000px;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    color: var(--secondary);
+    background-color: transparent;
+    font-size: 5rem;
+}
+
+#carousel-prev-btn {
+    position: absolute;
+    top: 150px;
+    left: 24px;
+}
+
+#carousel-next-btn {
+    position: absolute;
+    top: 150px;
+    left: 460px;
 }
 
 .index-title {
@@ -130,4 +140,10 @@ body h2 {
         height: 150px;
         display: block;
     }
+
+    #carousel-next-btn {
+        position: absolute;
+        top: 150px;
+        left: 915px;
+      }
 }
