@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const response = await fetch(apiPost);
     const responseData = await response.json();
-    const data = responseData.data; // Accessing the 'data' key
+    const data = responseData.data;
 
     const postsContainer = document.querySelector(".index-posts");
     if (Array.isArray(data)) {
@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         postDiv.classList.add("index-post-title");
         const image = document.createElement("img");
         image.src = post.media.url;
-        image.alt = post.media.alt || ""; // Provide alternative text if available
+        image.alt = post.media.alt || "";
         postDiv.appendChild(image);
 
         const title = document.createElement("h3");
         title.textContent = post.title;
         postDiv.appendChild(title);
 
-        // Add click event listener to navigate to post page on click
         postDiv.addEventListener("click", () => {
           window.location.href = `/post/index.html?id=${post.id}`;
         });
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         postsContainer.appendChild(postDiv);
       });
 
-      // Initialize the carousel
       initCarousel(data);
     } else {
       console.error("Data format is not as expected.");
@@ -53,7 +51,6 @@ function initCarousel(data) {
     title.textContent = post.title;
     carouselItem.appendChild(title);
 
-    // Add click event listener to navigate to post page on click
     carouselItem.addEventListener("click", () => {
       window.location.href = `/post/index.html?id=${post.id}`;
     });
@@ -61,7 +58,6 @@ function initCarousel(data) {
     carouselSlides.appendChild(carouselItem);
   });
 
-  // Initialize carousel functionality
   let currentSlide = 0;
   const slides = document.querySelectorAll(".index-carousel-item");
   const totalSlides = slides.length;
@@ -91,9 +87,7 @@ function initCarousel(data) {
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
-  // Show initial slide
   showSlide(currentSlide);
 
-  // Automatically transition to the next slide every 3 seconds
   setInterval(nextSlide, 5000);
 }

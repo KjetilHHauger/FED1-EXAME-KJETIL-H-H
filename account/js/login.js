@@ -2,11 +2,11 @@ const apiLogin = "https://v2.api.noroff.dev/auth/login";
 
 document.addEventListener("DOMContentLoaded", () => {
     const loginButton = document.querySelector(".login-cta");
-    
+
     loginButton.addEventListener("click", async () => {
         const email = document.getElementById("login-form-name").value;
         const password = document.getElementById("login-form-password").value;
-        
+
         try {
             const response = await fetch(apiLogin, {
                 method: "POST",
@@ -20,13 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const data = await response.json();
+            console.log('Response data:', data);
 
-            if (response.ok) {
-                // Successful login
+            if (response.ok && data.data && data.data.accessToken) {
+                localStorage.setItem('bearerToken', data.data.accessToken);
+                console.log('Token stored:', data.data.accessToken);
                 window.location.href = "/post/edit.html";
             } else {
-                // Unsuccessful login, display error message
-                alert("Invalid email or password. Please try again.");
+                console.error("Failed to retrieve access token:", data);
+                alert("Login failed. Please check your credentials and try again.");
             }
         } catch (error) {
             console.error("Error:", error);
