@@ -37,27 +37,36 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function initCarousel(data) {
+  if (!data || data.length === 0) {
+      console.error("No data available for carousel");
+      return;
+  }
+
+  data.sort((a, b) => new Date(b.created) - new Date(a.created));
+
   const carouselSlides = document.querySelector(".index-carousel-slides");
-  const lastThreePosts = data.slice(-3);
-  lastThreePosts.forEach((post) => {
-    const carouselItem = document.createElement("div");
-    carouselItem.classList.add("index-carousel-item");
-    const image = document.createElement("img");
-    image.src = post.media.url;
-    image.alt = post.media.alt || "";
-    carouselItem.appendChild(image);
+  const recentThreePosts = data.slice(0, 3);  
+  console.log("Recent three posts for carousel:", recentThreePosts);
 
-    const title = document.createElement("h3");
-    title.textContent = post.title;
-    carouselItem.appendChild(title);
+  recentThreePosts.forEach((post) => {
+      const carouselItem = document.createElement("div");
+      carouselItem.classList.add("index-carousel-item");
+      const image = document.createElement("img");
+      image.src = post.media.url;
+      image.alt = post.media.alt || "Default alt text";
+      carouselItem.appendChild(image);
 
-    carouselItem.addEventListener("click", () => {
-      window.location.href = `/post/index.html?id=${post.id}`;
-    });
+      carouselItem.addEventListener("click", () => {
+          window.location.href = `/post/index.html?id=${post.id}`;
+      });
 
-    carouselSlides.appendChild(carouselItem);
+      carouselSlides.appendChild(carouselItem);
   });
 
+  initializeCarouselControls(); 
+}
+
+function initializeCarouselControls() {
   let currentSlide = 0;
   const slides = document.querySelectorAll(".index-carousel-item");
   const totalSlides = slides.length;
@@ -65,29 +74,24 @@ function initCarousel(data) {
   const prevBtn = document.getElementById("carousel-prev-btn");
 
   function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.style.display = "block";
-      } else {
-        slide.style.display = "none";
-      }
-    });
+      slides.forEach((slide, i) => {
+          slide.style.display = (i === index) ? "block" : "none";
+      });
   }
 
   function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
   }
 
   function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    showSlide(currentSlide);
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
   }
 
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
   showSlide(currentSlide);
-
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 10000); 
 }
