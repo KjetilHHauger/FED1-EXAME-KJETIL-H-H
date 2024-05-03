@@ -35,6 +35,11 @@ body {
     border: none;
 }
 
+#edit-title::placeholder {
+    color: var(--primary);
+    padding-left: 8px;
+}
+
 .edit-main {
     display: flex;
     flex-direction: column;
