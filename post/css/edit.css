@@ -72,8 +72,15 @@ body {
 .old-post {
     margin-bottom: 16px;
     width: 250px;
+    height: 124px;
     background-color: var(--secondary);
     font-size: 18px;
+    position: relative;
+}
+
+.old-post h4 {
+    padding-left: 8px;
+    padding-top: 8px;
 }
 
 .old-post-edit {
@@ -84,7 +91,9 @@ body {
     border: none;
     width: 18px;
     height: 18px;
-    margin-left: 180px;
+    position: absolute;
+    right: 50px;
+    bottom: 8px;
 }
 
 .old-post-delete {
@@ -95,7 +104,9 @@ body {
     border: none;
     width: 18px;
     height: 18px;
-    margin-left: 16px;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
 }
 
 .edit-old-posts {
