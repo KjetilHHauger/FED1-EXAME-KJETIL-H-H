@@ -75,6 +75,7 @@ body {
     background-color: var(--secondary);
     padding: 8px;
     white-space: pre-wrap;
+    font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -91,5 +92,17 @@ body {
 
     .blog-logo {
         font-size: 5rem;
+    }
+
+    .post-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .post-title {
+        width: 600px;
+        height: 160px;
+        font-size: 2rem;
     }
 }
