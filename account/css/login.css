@@ -38,6 +38,7 @@ body {
 }
 
 .login-form p {
+    margin-top: 16px;
     display: flex;
     justify-content: center;
 }
@@ -52,27 +53,28 @@ body {
     color: var(--primary);
     font-size: 1.25rem;
     font-weight: 700;
+    margin: 0;
 }
 
 #login-form-name, #login-form-password {
     margin-top: 4px;
-    width: 165px;
+    width: 180px;
     height: 38px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid var(--primary);
     background-color: var(--secondary);
-    border: 1px solid;
 }
 
 .login-label {
     margin-top: 24px;
-    margin-left: 43px;
+    margin-left: 34px;
 }
 
 .login-cta {
     margin: 32px auto 20px auto;
     width: 80px;
-    height: 24px;
+    height: 32px;
     background-color: var(--primary);
     color: var(--secondary);
     font-size: 1.125rem;
@@ -104,8 +106,8 @@ body {
         margin-left: auto;
         margin-right: auto;
         background-color: var(--secondary);
-        font-size: 2.25rem;
-        padding-left: 25px;
+        font-size: 1.5rem;
+        padding-left: 8px;
     }
     
     .login-label {

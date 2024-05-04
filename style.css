@@ -104,6 +104,26 @@ body h2 {
     display: none;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    border: none;
+    cursor: pointer;
+}
+
+.pagination span {
+    margin: 0 15px;
+    color: var(--primary);
+}
+
 @media screen and (min-width: 768px) {
     
     .index-title {
