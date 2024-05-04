@@ -124,6 +124,17 @@ body h2 {
     color: var(--primary);
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-family: legothick;
+    color: var(--secondary);
+    margin-top: 16px;
+}
+
 @media screen and (min-width: 768px) {
     
     .index-title {

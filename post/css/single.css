@@ -68,6 +68,7 @@ body {
     height: 64px;
     margin-top: 36px;
     padding: 8px;
+    margin-bottom: 24px;
 }
 
 .post-text {
@@ -76,6 +77,18 @@ body {
     padding: 8px;
     white-space: pre-wrap;
     font-size: 1.2rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-family: legothick;
+    color: var(--secondary);
+    margin-top: 0;
+    font-size: 4rem;
 }
 
 @media screen and (min-width: 768px) {

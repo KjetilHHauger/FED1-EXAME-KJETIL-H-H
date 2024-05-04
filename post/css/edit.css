@@ -16,7 +16,8 @@ body {
     height: 100vh;
     margin: 0 35px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .blog-logo {
@@ -136,6 +137,18 @@ body {
 
 .edit-old-posts {
     margin-bottom: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo {
+    font-family: legothick;
+    color: var(--secondary);
+    margin-top: 0;
+    font-size: 4rem;
 }
 
 @media screen and (min-width: 768px) {
