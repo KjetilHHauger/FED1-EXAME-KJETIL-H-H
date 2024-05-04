@@ -31,21 +31,21 @@ function displayPost(post) {
     const postTagDiv = document.querySelector('.post-tag');
     const postTitleDiv = document.querySelector('.post-title');
     const postTextDiv = document.querySelector('.post-text');
+    const postDateDiv = document.querySelector('.post-date'); 
 
-    // Set up post image
     postImageDiv.style.backgroundImage = `url(${post.media.url})`;
     postImageDiv.setAttribute('alt', post.media.alt);
 
-    // Set up author info
     postAuthorDiv.textContent = `Author: ${post.author.name}`;
     postAuthorDiv.setAttribute('alt', post.author.avatar.alt);
 
-    // Set up post tags
-    postTagDiv.textContent = `Tags: ${post.tags.join(', ')}`;
+    postTagDiv.textContent = `Tag: ${post.tags.join(', ')}`;
 
-    // Set post title
     postTitleDiv.textContent = post.title;
 
-    // Set post body text
     postTextDiv.textContent = post.body;
+
+    const publishDate = new Date(post.created);
+    postDateDiv.textContent = `Published on: ${publishDate.toLocaleDateString()}`;
 }
+
