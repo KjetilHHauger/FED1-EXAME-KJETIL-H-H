@@ -2,6 +2,20 @@ const createAPI = 'https://v2.api.noroff.dev/blog/posts/Hauk';
 let isEditing = false;
 let currentEditingId = null;
 
+function updateCharacterCount() {
+    const body = document.getElementById('edit-text');
+    const remaining = 2000 - body.value.length;
+    let feedback = document.getElementById('char-count-feedback');
+    if (!feedback) {
+        feedback = document.createElement('div');
+        feedback.id = 'char-count-feedback';
+        body.parentNode.insertBefore(feedback, body.nextSibling);
+    }
+    feedback.textContent = `Characters left: ${remaining}`;
+}
+
+updateCharacterCount()
+
 document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.querySelector('input[type="submit"]');
     const cancelButton = document.getElementById('cancel-edit');
@@ -15,18 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchOldPosts();  
 });
-
-function updateCharacterCount() {
-    const body = document.getElementById('edit-text');
-    const remaining = 2000 - body.value.length;
-    let feedback = document.getElementById('char-count-feedback');
-    if (!feedback) {
-        feedback = document.createElement('div');
-        feedback.id = 'char-count-feedback';
-        body.parentNode.insertBefore(feedback, body.nextSibling);
-    }
-    feedback.textContent = `Characters left: ${remaining}`;
-}
 
 function handleFormSubmit(event) {
     event.preventDefault();
