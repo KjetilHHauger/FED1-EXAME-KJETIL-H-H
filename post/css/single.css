@@ -1,0 +1,36 @@
+:root {
+    --primary: #330C2F;
+    --secondary: #20C4D9;
+    --tertiary: #B7EBF6;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--primary);
+    height: 100vh;
+    margin: 0 35px;
+    color: var(--primary);
+}
+
+.blog-logo {
+    font-family: legothick;
+    color: var(--secondary);
+    margin-top: 0;
+    margin-left: 40px;
+}
+
+.post-title {
+    background-color: var(--secondary);
+    width: 136px;
+    height: 80px;
+}
+
+.post-image {
+    width: 250px;
+}
