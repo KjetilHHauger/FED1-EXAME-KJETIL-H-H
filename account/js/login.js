@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log('Response data:', data);
 
             if (response.ok && data.data && data.data.accessToken) {
-                localStorage.setItem('bearerToken', data.data.accessToken);
-                console.log('Token stored:', data.data.accessToken);
-                window.location.href = "/post/edit.html";
+                localStorage.setItem(`bearerToken_${data.data.name}`, data.data.accessToken);
+                localStorage.setItem('currentUser', data.data.name);
+                window.location.href = "/post/edit.html"; 
             } else {
                 console.error("Failed to retrieve access token:", data);
                 alert("Login failed. Please check your credentials and try again.");
