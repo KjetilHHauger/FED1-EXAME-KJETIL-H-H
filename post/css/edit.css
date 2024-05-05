@@ -44,6 +44,7 @@ body {
     padding: 4px; 
     box-sizing: border-box; 
     margin: 0;
+    font-size: 1.5rem;
 }
 
 #edit-title::placeholder {
@@ -85,7 +86,7 @@ body {
     margin: 8px 0 8px 8px;
 }
 
-.edit-btn input {
+.edit-btn input, button {
     width: 250px;
     height: 24px;
     background-color: var(--primary);
@@ -95,9 +96,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.edit-btn input:hover {
+.edit-btn input:hover, button:hover {
     background-color: var(--secondary);
     color: var(--primary);
 }
@@ -137,6 +139,10 @@ body {
 
 .edit-old-posts {
     margin-bottom: 24px;
+}
+
+.old-post-edit, .old-post-delete {
+    cursor: pointer;
 }
 
 footer {

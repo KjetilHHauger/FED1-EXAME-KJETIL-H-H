@@ -62,7 +62,7 @@ function updatePaginationControls() {
 }
 
 function createPaginationControls() {
-  const existingPagination = document.querySelector(".pagination");
+  const existingPagination = document.querySelector(".pagination-container");
   if (!existingPagination && totalPosts.length > postsPerPage) {
     const paginationDiv = document.createElement("div");
     paginationDiv.className = "pagination";
@@ -95,7 +95,8 @@ function createPaginationControls() {
     paginationDiv.appendChild(pageNumber);
     paginationDiv.appendChild(nextButton);
 
-    document.body.appendChild(paginationDiv);
+    const footer = document.querySelector('footer');
+    footer.parentNode.insertBefore(paginationDiv, footer);
   }
 }
 
