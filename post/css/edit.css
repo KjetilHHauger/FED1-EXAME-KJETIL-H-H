@@ -30,6 +30,7 @@ body {
     color: var(--secondary);
     margin-top: 0;
     margin-left: 40px;
+    letter-spacing: 1px;
 }
 
 .edit-title-main {
@@ -160,6 +161,7 @@ footer {
     color: var(--secondary);
     margin-top: 0;
     font-size: 4rem;
+    letter-spacing: 1px;
 }
 
 @media screen and (min-width: 768px) {

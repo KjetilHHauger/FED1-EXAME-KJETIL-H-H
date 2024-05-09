@@ -28,6 +28,8 @@ body {
     color: var(--secondary);
     margin-top: 0;
     font-size: 1.5rem;
+    font-family: legothick;
+    letter-spacing: 1px;
 }
 
 .post-title-container{
@@ -94,6 +96,7 @@ footer {
     color: var(--secondary);
     margin-top: 0;
     font-size: 4rem;
+    letter-spacing: 1px;
 }
 
 @media screen and (min-width: 768px) {

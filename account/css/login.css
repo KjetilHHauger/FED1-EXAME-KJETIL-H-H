@@ -31,10 +31,8 @@ body {
     font-weight: 700;
     color: var(--secondary);
     padding: 0;
-}
-
-.login-logo {
     font-family: legothick;
+    letter-spacing: 1px;
 }
 
 .login-form {

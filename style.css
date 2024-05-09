@@ -17,6 +17,7 @@
 
 .blog-logo {
     font-family: legothick;
+    letter-spacing: 1px;
 }
 
 body {
@@ -135,6 +136,7 @@ footer {
     font-family: legothick;
     color: var(--secondary);
     margin-top: 16px;
+    letter-spacing: 1px;
 }
 
 @media screen and (min-width: 768px) {
