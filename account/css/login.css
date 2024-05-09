@@ -1,3 +1,8 @@
+@font-face {
+    font-family: legothick;
+    src: url(/assets/font/legothick.ttf);
+}
+
 :root {
     --primary: #330C2F;
     --secondary: #20C4D9;
