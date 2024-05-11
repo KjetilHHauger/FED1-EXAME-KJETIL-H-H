@@ -153,5 +153,7 @@ function initializeCarouselControls() {
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
+  setInterval(nextSlide, 5000);
+
   showSlide(currentSlide); 
 }

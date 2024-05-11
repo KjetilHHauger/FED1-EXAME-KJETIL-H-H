@@ -20,7 +20,8 @@ body {
     background-color: var(--primary);
     height: 100vh;
     margin: 0 35px;
-    color: var(--primary);
+    color: var(--primary);   
+    max-width: 1130px;
 }
 
 .blog-logo {
@@ -30,6 +31,7 @@ body {
     font-size: 1.5rem;
     font-family: legothick;
     letter-spacing: 1px;
+    margin-left: 8px;
 }
 
 .post-title-container{
@@ -44,8 +46,8 @@ body {
 
 .post-title {
     background-color: var(--secondary);
-    width: 136px;
-    height: 92px;
+    max-width: 190px;
+    max-height: 120px;
     font-weight: 700;
     padding: 8px;
 }
@@ -53,16 +55,18 @@ body {
 .post-image {
     height: 250px;
     margin: 36px 0;
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondary);
-    background-position: center;
-    border: 16px solid var(--secondary);
 }
 
 .post-image img {
-    height: 220px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
+
 
 .post-author-tag {
     display: flex;
@@ -101,21 +105,31 @@ footer {
 
 @media screen and (min-width: 768px) {
     body {
-        margin: 0 70px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .post-title {
+        margin: 0 70px;
         display: flex;
         align-items: center;
-        width: 300px;
+        max-width: 500px;
         font-size: 1.3rem;
     }
 
     .blog-logo {
+        margin: 0 70px;
         font-size: 5rem;
+        margin-left: 16px;
+    }
+
+    .post-image {
+        margin-left: 70px;
+        margin-right: 70px;
     }
 
     .post-text {
+        margin: 0 70px;
         font-size: 1.5rem;
     }
 }
