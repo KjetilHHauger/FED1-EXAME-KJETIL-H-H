@@ -179,6 +179,7 @@ function loadPostInForm(post) {
     document.getElementById('edit-tag').value = post.tags.join(', ');
     document.getElementById('edit-text').value = post.body;
     updateCharacterCount();
+    window.scrollTo(0, 0);
 }
 
 function deletePost(postId) {

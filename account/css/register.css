@@ -73,11 +73,11 @@ body {
 }
 
 .register-form input[type="submit"] {
-    padding: 10px;
     border: 2px solid var(--primary);
     background-color: var(--secondary);
     color: var(--primary);
     cursor: pointer;
+    font-size: 1.125rem;
 }
 
 .register-form input[type="submit"]:hover {
@@ -103,6 +103,7 @@ body {
 
     .register-form input[type="submit"] {
         margin-top: 32px;
+        font-size: 2.25rem;
     }
 
     .register-form input {

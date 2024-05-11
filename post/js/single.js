@@ -26,26 +26,25 @@ function fetchPost(postId) {
 }
 
 function displayPost(post) {
-    const postImageDiv = document.querySelector('.post-image');
+    const postImage = document.getElementById('postImage');
     const postAuthorDiv = document.querySelector('.post-author');
     const postTagDiv = document.querySelector('.post-tag');
     const postTitleDiv = document.querySelector('.post-title');
     const postTextDiv = document.querySelector('.post-text');
     const postDateDiv = document.querySelector('.post-date'); 
 
-    postImageDiv.style.backgroundImage = `url(${post.media.url})`;
-    postImageDiv.setAttribute('alt', post.media.alt);
+    postImage.src = post.media.url;
+    postImage.alt = post.media.alt;
 
     postAuthorDiv.textContent = `Author: ${post.author.name}`;
-    postAuthorDiv.setAttribute('alt', post.author.avatar.alt);
+    if (post.author.avatar) {
+        postAuthorDiv.setAttribute('alt', post.author.avatar.alt);
+    }
 
     postTagDiv.textContent = `Tag: ${post.tags.join(', ')}`;
-
     postTitleDiv.textContent = post.title;
-
-    postTextDiv.textContent = post.body;
+    postTextDiv.innerHTML = `<p>${post.body}</p>`;
 
     const publishDate = new Date(post.created);
     postDateDiv.textContent = `Published on: ${publishDate.toLocaleDateString()}`;
 }
-
