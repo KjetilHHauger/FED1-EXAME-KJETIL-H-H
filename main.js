@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const response = await fetch(apiPost);
         const responseData = await response.json();
         totalPosts = responseData.data; 
-        filteredPosts = totalPosts; // Initialize filtered posts to all posts initially
+        filteredPosts = totalPosts; 
 
         if (totalPosts.length > 0) {
-            initCarousel(totalPosts); // Initialize the carousel with all posts
+            initCarousel(totalPosts);
             populateFilterOptions(totalPosts);
             displayPosts();
             createPaginationControls();
@@ -31,7 +31,6 @@ function initCarousel(posts) {
     const carouselSlides = document.querySelector(".index-carousel-slides");
     carouselSlides.innerHTML = '';
 
-    // Display only the first 3 posts in the carousel
     posts.slice(0, 3).forEach(post => {
         const carouselItem = document.createElement("div");
         carouselItem.classList.add("index-carousel-item");
@@ -76,7 +75,7 @@ function updateFilteredPosts() {
         const tagMatch = !filterTag || (post.tags && post.tags.includes(filterTag));
         return titleMatch && tagMatch;
     });
-    currentPage = 1; // Reset to the first page
+    currentPage = 1; 
     displayPosts();
 }
 
@@ -153,7 +152,7 @@ function initializeCarouselControls() {
     nextBtn.addEventListener("click", nextSlide);
     prevBtn.addEventListener("click", prevSlide);
 
-    setInterval(nextSlide, 5000); // Automatically move to the next slide every 5 seconds
+    setInterval(nextSlide, 5000);
 
-    showSlide(currentSlide); // Initially display the first slide
+    showSlide(currentSlide); 
 }
