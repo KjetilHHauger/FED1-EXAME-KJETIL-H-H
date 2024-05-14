@@ -31,24 +31,21 @@ body h2 {
 }
   
 .index-carousel {
-    position: relative;
     display: flex;
     overflow: hidden;
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--secondary);
+    gap: 8px;
     max-width: 1100px;
     height: 400px;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
 }
 
 .index-carousel-item img {
     padding: 8px 0;
     height: 400px;
-    width: 1100px;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -72,6 +69,26 @@ body h2 {
 
 #carousel-next-btn {
     right: 10px;
+}
+
+.carousel-container {
+    width: 100%;
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.index-sides {
+    display: none;
+}
+
+.index-sides-one, .index-sides-two, .index-sides-three {
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary);
+    cursor: pointer;
 }
 
 .index-title {
@@ -161,6 +178,25 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    .index-sides {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        width: 200px;
+        height: 33%;
+    }
+
+    .index-sides-one, .index-sides-two, .index-sides-three {
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+    }
+
+    .index-sides img {
+        height: 90%;
+        padding: 8px;
+    }
+
     .index-title {
         font-size: 12.5rem;
         margin: 0;
