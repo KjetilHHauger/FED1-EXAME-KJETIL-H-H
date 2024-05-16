@@ -3,6 +3,8 @@ let currentPage = 1;
 let postsPerPage = 12;
 let totalPosts = [];
 let filteredPosts = [];
+let currentSlide = 0;
+let slideInterval;
 
 document.addEventListener("DOMContentLoaded", async () => {
     await refreshPostsAndCarousel();
@@ -29,7 +31,9 @@ async function refreshPostsAndCarousel() {
 function initCarousel(posts) {
     const carouselSlides = document.querySelector(".index-carousel-slides");
     const sideDivs = [".index-sides-one", ".index-sides-two", ".index-sides-three"];
+    const carouselDots = document.querySelector(".carousel-dots");
     carouselSlides.innerHTML = '';
+    carouselDots.innerHTML = '';
 
     posts.forEach((post, index) => {
         const carouselItem = createCarouselItem(post);
@@ -49,6 +53,14 @@ function initCarousel(posts) {
                 sideDiv.appendChild(sideImage);
             }
         }
+
+        const dot = document.createElement("div");
+        dot.classList.add("carousel-dot");
+        dot.addEventListener("click", () => {
+            clearInterval(slideInterval);
+            showSlide(index);
+        });
+        carouselDots.appendChild(dot);
     });
 
     initializeCarouselControls();
@@ -70,32 +82,27 @@ function createCarouselItem(post) {
 }
 
 function initializeCarouselControls() {
-    let currentSlide = 0;
     const slides = document.querySelectorAll(".index-carousel-item");
-    const totalSlides = slides.length;
-    const nextBtn = document.getElementById("carousel-next-btn");
-    const prevBtn = document.getElementById("carousel-prev-btn");
+    const dots = document.querySelectorAll(".carousel-dot");
 
-    function showSlide(index) {
-        slides.forEach((slide) => (slide.style.display = "none"));
-        slides[index].style.display = "block";
-    }
-
-    nextBtn.onclick = () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-    };
-
-    prevBtn.onclick = () => {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-    };
-
-    setInterval(() => {
-        nextBtn.onclick();
-    }, 5000);
-
+    slideInterval = setInterval(nextSlide, 5000);
     showSlide(currentSlide);
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+}
+
+function showSlide(index) {
+    const slides = document.querySelectorAll(".index-carousel-item");
+    const dots = document.querySelectorAll(".carousel-dot");
+
+    slides.forEach((slide) => slide.style.display = "none");
+    dots.forEach((dot) => dot.classList.remove("active"));
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+    currentSlide = index;
 }
 
 function displayPosts() {
@@ -133,10 +140,8 @@ function handleFilter() {
 function updateFilteredPosts() {
     const searchText = document.getElementById('searchInput').value.toLowerCase();
     const filterTag = document.getElementById('filterTags').value;
-    filteredPosts = totalPosts.filter(post => {
-        return post.title.toLowerCase().includes(searchText) &&
-               (!filterTag || (post.tags && post.tags.includes(filterTag)));
-    });
+    filteredPosts = totalPosts.filter(post => post.title.toLowerCase().includes(searchText) &&
+               (!filterTag || (post.tags && post.tags.includes(filterTag))));
     currentPage = 1;
     displayPosts();
 }
