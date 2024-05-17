@@ -23,6 +23,7 @@ async function refreshPostsAndCarousel() {
         populateFilterOptions(filteredPosts);
         initCarousel(totalPosts.slice(0, 3));
         displayPosts();
+        setupTouchEvents(); 
     } catch (error) {
         console.error("Error fetching and refreshing data:", error);
     }
@@ -183,5 +184,42 @@ function updatePaginationControls() {
             }
             paginationDiv.appendChild(pageButton);
         }
+    }
+}
+
+function setupTouchEvents() {
+    const carouselContainer = document.querySelector(".carousel-container");
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    }, false);
+
+    carouselContainer.addEventListener('touchmove', function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+    }, false);
+
+    carouselContainer.addEventListener('touchend', function(event) {
+        handleSwipeGesture();
+    }, false);
+
+    function handleSwipeGesture() {
+        if (touchEndX < touchStartX) {
+            nextSlide(); 
+        }
+        if (touchEndX > touchStartX) {
+            previousSlide(); 
+        }
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % document.querySelectorAll(".index-carousel-item").length;
+        showSlide(currentSlide);
+    }
+
+    function previousSlide() {
+        currentSlide = (currentSlide - 1 + document.querySelectorAll(".index-carousel-item").length) % document.querySelectorAll(".index-carousel-item").length;
+        showSlide(currentSlide);
     }
 }
