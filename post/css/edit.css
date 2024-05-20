@@ -29,8 +29,9 @@ body {
     font-family: legothick;
     color: var(--secondary);
     margin-top: 0;
-    margin-left: 40px;
+    margin-left: 20px;
     letter-spacing: 1px;
+    font-size: 1.5rem;
 }
 
 .edit-title-main {

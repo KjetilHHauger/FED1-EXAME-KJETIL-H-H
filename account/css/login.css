@@ -57,11 +57,11 @@ body {
     text-decoration: none;
 }
 
-.login-form h3 {
+.login-form h2 {
     display: flex;
     justify-content: center;
     color: var(--primary);
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
 }
