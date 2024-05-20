@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create and Edit │ Brickify</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/post/css/edit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/post/css/edit.css" />
     <script src="/post/js/edit.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="edit-container">
-        <form class="edit-form"> 
-            <div class="edit-title-main-container">
-                <div class="edit-title-main">
-                    <textarea id="edit-title" placeholder="Enter title" aria-label="Enter your title"></textarea>
-                    <h1 class="blog-logo">Brickify</h1>
-                </div>            
-            </div>
-            <div class="edit-main">
-                <input type="text" id="edit-url" placeholder="https://www.some.picture" aria-label="Enter your image url">
-                <input type="text" id="edit-alt" placeholder="Describe your image" aria-label="Describe your image">
-                <input type="text" id="edit-tag" placeholder="lego, bricks, sets" aria-label="Enter your tags here. Separate with ,">
-                <textarea id="edit-text" placeholder="Enter your text here. Max 2000 characters" aria-label="Textarea, enter blog text here" maxlength="2000"></textarea>
-            </div>
-            <div class="edit-btn">
-                <input type="submit" value="Publish" aria-label="Publish your blog">
-                <input type="button" value="Cancel" id="cancel-edit" 
-                onclick="resetForm()" aria-label="Cancel editing">
-            </div>
-        </form>
-        <div class="edit-old-posts"></div>
+      <form class="edit-form">
+        <div class="edit-title-main-container">
+          <div class="edit-title-main">
+            <textarea
+              id="edit-title"
+              placeholder="Enter title"
+              aria-label="Enter your title"
+            ></textarea>
+            <h1 class="blog-logo">Brickify</h1>
+          </div>
+        </div>
+        <div class="edit-main">
+          <input
+            type="text"
+            id="edit-url"
+            placeholder="https://www.some.picture"
+            aria-label="Enter your image url"
+          />
+          <input
+            type="text"
+            id="edit-alt"
+            placeholder="Describe your image"
+            aria-label="Describe your image"
+          />
+          <input
+            type="text"
+            id="edit-tag"
+            placeholder="lego, bricks, sets"
+            aria-label="Enter your tags here. Separate with ,"
+          />
+          <textarea
+            id="edit-text"
+            placeholder="Enter your text here. Max 2000 characters"
+            aria-label="Textarea, enter blog text here"
+            maxlength="2000"
+          ></textarea>
+        </div>
+        <div class="edit-btn">
+          <input type="submit" value="Publish" aria-label="Publish your blog" />
+          <input
+            type="button"
+            value="Cancel"
+            id="cancel-edit"
+            onclick="resetForm()"
+            aria-label="Cancel editing"
+          />
+        </div>
+      </form>
+      <div class="edit-old-posts"></div>
     </div>
     <footer>
-        <h2 class="footer-logo">Brickify</h2>
-    </footer>  
-</body>
+      <h2 class="footer-logo">Brickify</h2>
+    </footer>
+  </body>
 </html>
