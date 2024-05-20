@@ -50,6 +50,7 @@ body {
     background-color: var(--secondary);
     max-width: 190px;
     max-height: 120px;
+    font-size: 1rem;
     font-weight: 700;
     padding: 8px;
 }
@@ -154,7 +155,7 @@ footer {
         display: flex;
         align-items: center;
         max-width: 500px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .blog-logo {

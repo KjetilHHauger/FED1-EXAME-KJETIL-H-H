@@ -15,13 +15,13 @@
     <h1 class="register-title">Brickify</h1>
     <form class="register-form" onsubmit="registerUser(event)">
         <label for="register-form-name">Name</label>
-        <input type="text" id="register-form-name" name="name" placeholder="John Smith" required>
+        <input type="text" id="register-form-name" name="name" placeholder="John Smith" required autocomplete="name">
         <label for="register-form-email">Email</label>
-        <input type="email" id="register-form-email" name="email" placeholder="e@mail.com" required>
+        <input type="email" id="register-form-email" name="email" placeholder="e@mail.com" required autocomplete="email">
         <label for="register-form-password">Password</label>
-        <input type="password" id="register-form-password" name="password" placeholder="Password" minlength="8" required>
+        <input type="password" id="register-form-password" name="password" placeholder="Password" minlength="8" required autocomplete="new-password">
         <label for="register-form-confirm">Confirm password</label>
-        <input type="password" id="register-form-confirm" name="confirm" placeholder="Confirm password" minlength="8" required>
+        <input type="password" id="register-form-confirm" name="confirm" placeholder="Confirm password" minlength="8" required autocomplete="new-password">
         <input type="submit" value="Register" aria-label="Register button">
     </form>
 </body>
