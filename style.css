@@ -1,251 +1,255 @@
 @font-face {
-    font-family: legothick;
-    src: url(/assets/font/legothick.ttf);
+  font-family: legothick;
+  src: url(/assets/font/legothick.ttf);
 }
 
 :root {
-    --primary: #330C2F;
-    --secondary: #20C4D9;
+  --primary: #330c2f;
+  --secondary: #20c4d9;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .blog-logo {
-    font-family: legothick;
-    letter-spacing: 1px;
+  font-family: legothick;
+  letter-spacing: 1px;
 }
 
 body {
-    background-color: var(--primary);
-    padding: 0 35px 0 35px;
+  background-color: var(--primary);
+  padding: 0 35px 0 35px;
 }
 
 body h2 {
-    color: var(--secondary);
-    font-size: 2rem;
-    margin-top: 80px;
+  color: var(--secondary);
+  font-size: 2rem;
+  margin-top: 80px;
 }
-  
+
 .index-carousel {
-    display: flex;
-    overflow: hidden;
-    margin-top: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 8px;
-    max-width: 1100px;
-    height: 400px;
-    cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 8px;
+  max-width: 1100px;
+  height: 400px;
+  cursor: pointer;
 }
 
 .index-carousel-item img {
-    padding: 8px 0;
-    height: 400px;
-    width: 100%;
-    object-fit: contain;
+  padding: 8px 0;
+  height: 400px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .carousel-dots {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    gap: 8px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  gap: 8px;
 }
 
 .carousel-dot {
-    height: 15px;
-    width: 15px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  height: 15px;
+  width: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .carousel-dot.active {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .carousel-container {
-    width: 100%;
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .index-sides {
-    display: none;
+  display: none;
 }
 
-.index-sides-one, .index-sides-two, .index-sides-three {
-    height: 100%;
-    width: 100%;
-    background-color: var(--secondary);
-    cursor: pointer;
+.index-sides-one,
+.index-sides-two,
+.index-sides-three {
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary);
+  cursor: pointer;
 }
 
 .index-title {
-    display: flex;
-    justify-content: center;
-    padding-top: 84px;
-    color: var(--secondary);
-    font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 84px;
+  color: var(--secondary);
+  font-size: 4rem;
 }
 
 .index-posts {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px;
-    cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  cursor: pointer;
 }
 
 .index-posts h3 {
-    padding: 0 8px 0 8px;
+  padding: 0 8px 0 8px;
 }
 
 .filter-search {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .index-post-title {
-    display: flex;
-    align-items: center;
-    background-color: var(--secondary);
-    max-width: 1000px;
-    height: 100px;
-    font-weight: 900;
-    margin-top: 8px;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary);
+  max-width: 1000px;
+  height: 100px;
+  font-weight: 900;
+  margin-top: 8px;
+  overflow: hidden;
 }
 
-.index-post-title img{
-    display: none;
+.index-post-title img {
+  display: none;
 }
 
 #searchInput {
-    width: 120px;
-    height: 40px;
-    background-color: var(--secondary);
+  width: 120px;
+  height: 40px;
+  background-color: var(--secondary);
 }
 
 #searchInput::placeholder {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 #filterTags {
-    background-color: var(--secondary);
-    height: 40px;
+  background-color: var(--secondary);
+  height: 40px;
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 8px;
 }
 
 .pagination button {
-    padding: 10px 20px;
-    color: var(--primary);
-    background-color: var(--secondary);
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border: none;
+  cursor: pointer;
 }
 
 .pagination span {
-    margin: 0 15px;
-    color: var(--primary);
+  margin: 0 15px;
+  color: var(--primary);
 }
 
 footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo {
-    font-family: legothick;
-    color: var(--secondary);
-    margin-top: 16px;
-    letter-spacing: 1px;
+  font-family: legothick;
+  color: var(--secondary);
+  margin-top: 16px;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 768px) {
-    .index-sides {
-        display: flex;
-        gap: 8px;
-        flex-direction: column;
-        width: 200px;
-        height: 33%;
-    }
+  .index-sides {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    width: 200px;
+    height: 33%;
+  }
 
-    .index-sides-one, .index-sides-two, .index-sides-three {
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-    }
+  .index-sides-one,
+  .index-sides-two,
+  .index-sides-three {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+  }
 
-    .index-sides img {
-        height: 90%;
-        padding: 8px;
-    }
+  .index-sides img {
+    height: 90%;
+    padding: 8px;
+  }
 
-    .index-title {
-        font-size: 12.5rem;
-        margin: 0;
-    }
+  .index-title {
+    font-size: 12.5rem;
+    margin: 0;
+  }
 
-    .index-posts {
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 24px;
-        row-gap: 24px;
-        max-width: 1100px;
-    }
+  .index-posts {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 24px;
+    max-width: 1100px;
+  }
 
-    .index-posts-title {
-        max-width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .index-posts-title {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .filter-search {
-        max-width: 1100px;
-        margin: 12px auto 34px auto;
-    }
+  .filter-search {
+    max-width: 1100px;
+    margin: 12px auto 34px auto;
+  }
 
-    .index-post-title {
-        display: flex;
-        flex-direction: column;
-        width: 350px;
-        height: 350px;
-        padding-left: 0;
-        font-weight: 900;
-        margin-top: 0;
-    }
+  .index-post-title {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+    padding-left: 0;
+    font-weight: 900;
+    margin-top: 0;
+  }
 
-    .index-post-title h3 {
-       text-align: center;
-    }
+  .index-post-title h3 {
+    text-align: center;
+  }
 
-    .index-post-title img {
-        max-width: 100%; 
-        object-fit: contain;
-        padding: 8px;
-        height: 250px;
-        display: block;
-    }
+  .index-post-title img {
+    max-width: 100%;
+    object-fit: contain;
+    padding: 8px;
+    height: 250px;
+    display: block;
+  }
 
-    .pagination button {
-        font-size: 2rem;
-    }
+  .pagination button {
+    font-size: 2rem;
+  }
 }
