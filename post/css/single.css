@@ -1,192 +1,200 @@
 @font-face {
-    font-family: legothick;
-    src: url(/assets/font/legothick.ttf);
+  font-family: legothick;
+  src: url(/assets/font/legothick.ttf);
 }
 
 :root {
-    --primary: #330C2F;
-    --secondary: #20C4D9;
-    --tertiary: #B7EBF6;
+  --primary: #330c2f;
+  --secondary: #20c4d9;
+  --tertiary: #b7ebf6;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--primary);
-    color: var(--primary);
-    max-width: 1130px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-    padding: 0 35px;
+  background-color: var(--primary);
+  color: var(--primary);
+  max-width: 1130px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  padding: 0 35px;
 }
 
 .blog-logo {
-    font-family: legothick, Arial, sans-serif;
-    color: var(--secondary);
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    margin-left: 8px;
+  font-family: legothick, Arial, sans-serif;
+  color: var(--secondary);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-left: 8px;
 }
 
 .post-title-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
 }
 
 .post-title-container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .post-title {
-    background-color: var(--secondary);
-    max-width: 190px;
-    max-height: 120px;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 8px;
+  background-color: var(--secondary);
+  max-width: 190px;
+  max-height: 120px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px;
 }
 
 .post-image-info-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .post-image {
-    flex-grow: 1;
-    margin-right: 16px;
-    background-color: var(--secondary);
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
+  flex-grow: 1;
+  margin-right: 16px;
+  background-color: var(--secondary);
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
 }
 
 .post-image img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .post-author-tag-date {
-    align-self: flex-start;
-    margin-left: 80px;
-    background-color: var(--secondary);
-    padding: 8px;
-    height: 110px;
-    width: 200px;
-    margin-top: 140px;
+  align-self: flex-start;
+  margin-left: 80px;
+  background-color: var(--secondary);
+  padding: 8px;
+  height: 110px;
+  width: 200px;
+  margin-top: 140px;
 }
 
 .post-author-tag {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-.post-author, .post-tag, .post-date {
-    margin-top: 8px;
+.post-author,
+.post-tag,
+.post-date {
+  margin-top: 8px;
 }
 
 .post-text {
-    background-color: var(--secondary);
-    padding: 8px;
-    white-space: pre-wrap;
-    font-size: 1.2rem;
+  background-color: var(--secondary);
+  padding: 8px;
+  white-space: pre-wrap;
+  font-size: 1.2rem;
 }
 
 .post-text p {
-    padding: 16px;
+  padding: 16px;
 }
 
 footer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo {
-    font-family: legothick, Arial, sans-serif;
-    color: var(--secondary);
-    font-size: 4rem;
-    letter-spacing: 1px;
-    margin-top: 24px;
+  font-family: legothick, Arial, sans-serif;
+  color: var(--secondary);
+  font-size: 4rem;
+  letter-spacing: 1px;
+  margin-top: 24px;
 }
 
 @media screen and (max-width: 767px) {
-    .post-image-info-container {
-        flex-direction: column;
-        margin-bottom: 24px;
-    }
+  .post-image-info-container {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
 
-    .post-image {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 24px;
-    }
+  .post-image {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 24px;
+  }
 
-    .post-text p {
-        padding: 8px;
-    }
+  .post-text p {
+    padding: 8px;
+  }
 
-    .post-author-tag-date {
-        width: 100%;
-        margin: 24px 0;
-        height: 48px;
-    }
+  .post-author-tag-date {
+    width: 100%;
+    margin: 24px 0;
+    height: 48px;
+  }
 
-    .post-author, .post-tag, .post-date {
-        margin-top: 0;
-    }
+  .post-author,
+  .post-tag,
+  .post-date {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .post-title {
-        margin: 0 70px;
-        display: flex;
-        align-items: center;
-        max-width: 500px;
-        font-size: 1.2rem;
-    }
+  .post-title {
+    margin: 0 70px;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    font-size: 1.2rem;
+  }
 
-    .blog-logo {
-        margin: 0 70px;
-        font-size: 5rem;
-        margin-left: 16px;
-    }
+  .blog-logo {
+    margin: 0 70px;
+    font-size: 5rem;
+    margin-left: 16px;
+  }
 
-    .post-image-info-container {
-        margin: 48px 70px;
-    }
+  .post-image-info-container {
+    margin: 48px 70px;
+  }
 
-    .post-image {
-        max-width: 700px;
-    }
+  .post-image {
+    max-width: 700px;
+  }
 
-    .post-text {
-        margin: 0 70px;
-        font-size: 1.5rem;
-    }
-    
-    .post-author-tag {
-        display: flex;
-        flex-direction: column;
-    }
+  .post-text {
+    margin: 0 70px;
+    font-size: 1.5rem;
+  }
+
+  .post-author-tag {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 1100px) {
-    .post-title {
-        width: 600px;
-        height: 160px;
-        font-size: 2rem;
-    }
+  .post-title {
+    width: 600px;
+    height: 160px;
+    font-size: 2rem;
+  }
 }
