@@ -202,11 +202,13 @@ function setupTouchEvents() {
   const carouselContainer = document.querySelector(".carousel-container");
   let touchStartX = 0;
   let touchEndX = 0;
+  let isSwipeAction = false; 
 
   carouselContainer.addEventListener(
     "touchstart",
     function (event) {
       touchStartX = event.changedTouches[0].screenX;
+      isSwipeAction = false; 
     },
     false
   );
@@ -215,6 +217,10 @@ function setupTouchEvents() {
     "touchmove",
     function (event) {
       touchEndX = event.changedTouches[0].screenX;
+
+      if (Math.abs(touchEndX - touchStartX) > 30) {
+        isSwipeAction = true; 
+      }
     },
     false
   );
@@ -222,7 +228,9 @@ function setupTouchEvents() {
   carouselContainer.addEventListener(
     "touchend",
     function (event) {
-      handleSwipeGesture();
+      if (isSwipeAction) { 
+        handleSwipeGesture();
+      }
     },
     false
   );
@@ -230,25 +238,19 @@ function setupTouchEvents() {
   function handleSwipeGesture() {
     if (touchEndX < touchStartX) {
       nextSlide();
-    }
-    if (touchEndX > touchStartX) {
+    } else if (touchEndX > touchStartX) {
       previousSlide();
     }
   }
 
   function nextSlide() {
-    currentSlide =
-      (currentSlide + 1) %
-      document.querySelectorAll(".index-carousel-item").length;
+    currentSlide = (currentSlide + 1) % document.querySelectorAll(".index-carousel-item").length;
     showSlide(currentSlide);
   }
 
   function previousSlide() {
-    currentSlide =
-      (currentSlide -
-        1 +
-        document.querySelectorAll(".index-carousel-item").length) %
-      document.querySelectorAll(".index-carousel-item").length;
+    currentSlide = (currentSlide - 1 + document.querySelectorAll(".index-carousel-item").length) % document.querySelectorAll(".index-carousel-item").length;
     showSlide(currentSlide);
   }
 }
+
