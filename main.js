@@ -92,16 +92,27 @@ function createCarouselItem(post) {
 
 function initializeCarouselControls() {
   const slides = document.querySelectorAll(".index-carousel-item");
+  const prevButton = document.querySelector(".carousel-prev");
+  const nextButton = document.querySelector(".carousel-next");
   const dots = document.querySelectorAll(".carousel-dot");
 
   slideInterval = setInterval(nextSlide, 5000);
+
+  prevButton.addEventListener('click', previousSlide);
+  nextButton.addEventListener('click', nextSlide);
   showSlide(currentSlide);
 
   function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+  }
+
+  function previousSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
   }
 }
+
 
 function showSlide(index) {
   const slides = document.querySelectorAll(".index-carousel-item");
