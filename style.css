@@ -81,6 +81,10 @@ body h2 {
   position: relative;
 }
 
+.carousel-prev, .carousel-next {
+  display: none;
+}
+
 .index-sides {
   display: none;
 }
@@ -182,6 +186,36 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .carousel-prev, .carousel-next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin: -22px 8px 0 8px;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 24px;
+    transition: 0.6s ease;      
+    background-color: rgba(0, 0, 0, 0.301);
+  }
+  
+  .carousel-prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .carousel-next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   .index-sides {
     display: flex;
     gap: 8px;
