@@ -27,19 +27,20 @@ You can view the live version of the Brickify LEGO blog hosted on Netlify at [Br
 
 /
 |- index.html # Main page with post listings, pagination, and carousel
-|- post/index.html # Detailed post view
+|- post/
+| |- index.html # Detailed post view
+| |- edit.html # Post editing interface
 |- account/
 | |- login.html # Login page for blog management
 | |- register.html # Registration page for new users
-| |- edit.html # Post editing interface
-
 
 ## Setup and Installation
 
 No installation is required to view the live demo. However, if you wish to run the project locally or contribute, you may clone the repository using the following command:
 
-## Contributing
-Contributions are welcome! If you have suggestions or enhancements, please fork the repository and submit a pull request with your changes. Please ensure all contributions adhere to the existing design and functional specifications.
+## Development Process
+
+Check out the [Project Board](https://github.com/yourusername/yourrepository/projects/1) to see the latest project status and find out how you can contribute to the ongoing efforts.
 
 ## License
 
