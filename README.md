@@ -26,13 +26,13 @@ You can view the live version of the Brickify LEGO blog hosted on Netlify at [Br
 ## Project Structure
 
 /
-|- index.html # Main page with post listings, pagination, and carousel
-|- post/
-| |- index.html # Detailed post view
-| |- edit.html # Post editing interface
-|- account/
-| |- login.html # Login page for blog management
-| |- register.html # Registration page for new users
+|- index.html # Main page with post listings, pagination, and carousel<br>
+|- post/<br>
+| |- index.html # Detailed post view<br>
+| |- edit.html # Post editing interface<br>
+|- account/<br>
+| |- login.html # Login page for blog management<br>
+| |- register.html # Registration page for new users<br>
 
 ## Setup and Installation
 
