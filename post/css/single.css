@@ -148,6 +148,7 @@ footer {
     width: 100%;
     margin: 24px 0;
     height: 48px;
+    padding: 6px 8px 0 8px;
   }
 
   .post-author,
