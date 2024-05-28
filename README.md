@@ -25,11 +25,11 @@ You can view the live version of the Brickify LEGO blog hosted on Netlify at [Br
 
 /FED1-EXAME-KJETIL-H-H
 |- /post/<br>
-| `-- /index.html # Detailed post view<br>
-| `-- /edit.html # Post editing interface<br>
+| -- /index.html # Detailed post view<br>
+| -- /edit.html # Post editing interface<br>
 |- /account/<br>
-| `-- /login.html # Login page for blog management<br>
-| `-- /register.html # Registration page for new users<br>
+| -- /login.html # Login page for blog management<br>
+| -- /register.html # Registration page for new users<br>
 |- index.html # Main page with post listings, pagination, and carousel<br>
 
 
