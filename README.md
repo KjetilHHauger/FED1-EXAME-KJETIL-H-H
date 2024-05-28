@@ -23,7 +23,7 @@ You can view the live version of the Brickify LEGO blog hosted on Netlify at [Br
 
 ## Project Structure
 
-/FED1-EXAME-KJETIL-H-H
+/FED1-EXAME-KJETIL-H-H<br>
 |- /post/<br>
 | -- /index.html # Detailed post view<br>
 | -- /edit.html # Post editing interface<br>
