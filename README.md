@@ -1,5 +1,7 @@
 # Brickify LEGO Blog
 
+![Brickify](/assets/readme/readme.webp)
+
 Welcome to the Brickify LEGO blog, a dynamic web application designed for LEGO enthusiasts. This blog features advanced functionalities including pagination, a search filter, a carousel for latest posts, and user authentication for blog management.
 
 ## Features
